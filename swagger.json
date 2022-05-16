@@ -1,0 +1,1983 @@
+{
+  "openapi": "3.0.1",
+  "servers": [
+    {
+      "url": "http://dev.tmonline.vn/mobile",
+      "description": "Generated server url"
+    }
+  ],
+  "paths": {
+    "/api/v1/form/cmnd": {
+      "put": {
+        "tags": [
+          "application-form-controller"
+        ],
+        "operationId": "readUploadCMNDData",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/score/juicy-score-data": {
+      "post": {
+        "tags": [
+          "juicy-score-endpoint"
+        ],
+        "operationId": "processJuicyScoreData",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JuicyScoreDataRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/form/registration-address-data": {
+      "get": {
+        "tags": [
+          "application-form-controller"
+        ],
+        "operationId": "getAddressData",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "application-form-controller"
+        ],
+        "operationId": "updateAddressData",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "step",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/form/personal-data": {
+      "get": {
+        "tags": [
+          "application-form-controller"
+        ],
+        "operationId": "getPersonalData",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "application-form-controller"
+        ],
+        "operationId": "updatePersonalData",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "step",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PersonalDataDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/form/license-data": {
+      "get": {
+        "tags": [
+          "application-form-controller"
+        ],
+        "operationId": "getLicenseData",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "application-form-controller"
+        ],
+        "operationId": "updateLicenseData",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LicenseDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/form/employment-data": {
+      "get": {
+        "tags": [
+          "application-form-controller"
+        ],
+        "operationId": "getEmploymentData",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "application-form-controller"
+        ],
+        "operationId": "updateEmploymentData",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "step",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmploymentDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/form/contact-person-data": {
+      "get": {
+        "tags": [
+          "application-form-controller"
+        ],
+        "operationId": "getContactPersonsData",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "application-form-controller"
+        ],
+        "operationId": "updateContactPersonsData",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "step",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContactPersonDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/form/condition-data": {
+      "get": {
+        "tags": [
+          "application-form-controller"
+        ],
+        "operationId": "getConditionData",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "application-form-controller"
+        ],
+        "operationId": "updateConditionData",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "step",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConditionDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/form/bank-details-data": {
+      "get": {
+        "tags": [
+          "application-form-controller"
+        ],
+        "operationId": "getBankDetails",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ignoreUpdateLastAppStepDate",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "application-form-controller"
+        ],
+        "operationId": "updateBankDetails",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "step",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "required": [
+                  "document1",
+                  "document2"
+                ],
+                "type": "object",
+                "properties": {
+                  "document1": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "document2": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/customer-mobile-contacts": {
+      "post": {
+        "tags": [
+          "mobile-contact-data-controller"
+        ],
+        "operationId": "persistMobileContactData",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MobileContactDataRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/auth/token": {
+      "post": {
+        "tags": [
+          "auth-controller"
+        ],
+        "operationId": "getToken",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestTokenDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/auth/acceptance-code": {
+      "post": {
+        "tags": [
+          "auth-controller"
+        ],
+        "operationId": "sendAcceptanceCode",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcceptanceCodeSendingRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/applications": {
+      "post": {
+        "tags": [
+          "application-controller"
+        ],
+        "operationId": "createApplication",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateApplicationDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/profile": {
+      "get": {
+        "tags": [
+          "borrower-endpoint"
+        ],
+        "operationId": "getInfo",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/products/second-calculator": {
+      "get": {
+        "tags": [
+          "product-controller"
+        ],
+        "operationId": "secondCalculator",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseObject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/products/initial": {
+      "get": {
+        "tags": [
+          "product-controller"
+        ],
+        "operationId": "initial",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseObject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/products/calculate-monthly-payment": {
+      "get": {
+        "tags": [
+          "product-controller"
+        ],
+        "operationId": "calculateMonthlyPayment",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "amount",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "term",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseObject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/products/calculate-installments": {
+      "get": {
+        "tags": [
+          "product-controller"
+        ],
+        "operationId": "calculateInstallments",
+        "parameters": [
+          {
+            "name": "amount",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "term",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/BaseResponseObject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/loan/last": {
+      "get": {
+        "tags": [
+          "loan-end-point"
+        ],
+        "operationId": "last",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExtendedLoanDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/form/address-dictionary": {
+      "get": {
+        "tags": [
+          "application-form-controller"
+        ],
+        "operationId": "getAddressDictionary",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/applications/status": {
+      "get": {
+        "tags": [
+          "application-controller"
+        ],
+        "operationId": "status",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string",
+                  "enum": [
+                    "INITIAL",
+                    "SCORING_IN_PROGRESS",
+                    "WAITING_CIC_AVAILABILITY",
+                    "SENT_TO_CREDIT_HISTORY_CHECK",
+                    "CREDIT_HISTORY_CHECK_IN_PROGRESS",
+                    "SENT_TO_UNDERWRITING",
+                    "UNDERWRITING_IN_PROGRESS",
+                    "REJECTED",
+                    "APPROVED",
+                    "CANCELED_BY_CLIENT",
+                    "CONFIRMED_BY_CLIENT",
+                    "SIGNED_BY_VERIFIER",
+                    "READY_FOR_PAYOUT",
+                    "READY_FOR_AUTO_DISBURSEMENT",
+                    "PAYOUT_IN_PROGRESS",
+                    "PAYOUT_ERROR",
+                    "READY_FOR_MANUAL_DISBURSEMENT",
+                    "OUTGOING_PAYMENT_IN_PROGRESS",
+                    "OUTGOING_PAYMENT_ERROR",
+                    "OUTGOING_PAYMENT_CANCELED",
+                    "OUTGOING_PAYMENT_SUCCEED"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/applications/last": {
+      "get": {
+        "tags": [
+          "application-controller"
+        ],
+        "operationId": "last_1",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApplicationDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/applications/exists": {
+      "get": {
+        "tags": [
+          "application-controller"
+        ],
+        "operationId": "exists",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "JuicyScoreDataRequest": {
+        "required": [
+          "sessionId"
+        ],
+        "type": "object",
+        "properties": {
+          "sessionId": {
+            "type": "string"
+          }
+        }
+      },
+      "AddressDto": {
+        "required": [
+          "city",
+          "district"
+        ],
+        "type": "object",
+        "properties": {
+          "city": {
+            "maxLength": 255,
+            "minLength": 0,
+            "type": "string"
+          },
+          "cityId": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string"
+          },
+          "district": {
+            "maxLength": 255,
+            "minLength": 0,
+            "type": "string"
+          },
+          "districtId": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string"
+          },
+          "ward": {
+            "maxLength": 255,
+            "minLength": 0,
+            "type": "string"
+          },
+          "houseStreet": {
+            "maxLength": 255,
+            "minLength": 0,
+            "type": "string"
+          },
+          "flat": {
+            "maxLength": 255,
+            "minLength": 0,
+            "type": "string"
+          }
+        }
+      },
+      "PersonalDataDto": {
+        "required": [
+          "birthDate",
+          "cardIssuingDate",
+          "fullName",
+          "loanPurpose",
+          "sex"
+        ],
+        "type": "object",
+        "properties": {
+          "primaryId": {
+            "type": "string"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "cardIssuingDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "sex": {
+            "type": "string",
+            "enum": [
+              "MALE",
+              "FEMALE"
+            ]
+          },
+          "loanPurpose": {
+            "type": "string",
+            "enum": [
+              "BUSINESS",
+              "CONSUMPTION",
+              "EDUCATION",
+              "MEDICAL",
+              "OTHERS"
+            ]
+          },
+          "email": {
+            "type": "string"
+          }
+        }
+      },
+      "LicenseDto": {
+        "type": "object",
+        "properties": {
+          "license": {
+            "maxLength": 255,
+            "minLength": 0,
+            "type": "string"
+          }
+        }
+      },
+      "EmploymentDto": {
+        "required": [
+          "occupationType"
+        ],
+        "type": "object",
+        "properties": {
+          "occupationType": {
+            "type": "string",
+            "enum": [
+              "WORKING_WITH_CONTRACT",
+              "WORKING_WITHOUT_CONTRACT",
+              "WORKING_MYSELF",
+              "UNEMPLOYED",
+              "STUDENT",
+              "WORKING_RETIRED",
+              "RETIRED"
+            ]
+          },
+          "workingIndustry": {
+            "type": "string",
+            "enum": [
+              "MANUFACTURING",
+              "SECURITY",
+              "SERVICES",
+              "TRANSPORTATION",
+              "TRADING",
+              "CONTRUCTIONS",
+              "IT_TELECOM",
+              "FUEL_ENERGY",
+              "EDUCATION_SCIENCE",
+              "BANKING_INSURANCE_FINANCE_CONSULTING",
+              "MINING_SECTOR",
+              "FARMERS_AGRICULTURE",
+              "CULTURE_ARTIST",
+              "HEALTHCARE_MEDICAL",
+              "GOVERNMENT_AUTHORITIES",
+              "MILITARY_POLICE"
+            ]
+          },
+          "employerName": {
+            "maxLength": 255,
+            "minLength": 0,
+            "type": "string"
+          },
+          "employerPhone": {
+            "maxLength": 255,
+            "minLength": 0,
+            "pattern": "0\\d{7,10}",
+            "type": "string"
+          },
+          "income": {
+            "maximum": 999999999,
+            "exclusiveMaximum": false,
+            "minimum": 1000,
+            "exclusiveMinimum": false,
+            "type": "number"
+          }
+        }
+      },
+      "ContactPersonDto": {
+        "required": [
+          "name",
+          "phone",
+          "relationType"
+        ],
+        "type": "object",
+        "properties": {
+          "relationType": {
+            "type": "string",
+            "enum": [
+              "FATHER",
+              "MOTHER",
+              "HUSBAND_WIFE",
+              "SIBLINGS",
+              "CORRECT_CHILDREN",
+              "RELATIVE",
+              "FRIEND"
+            ]
+          },
+          "name": {
+            "maxLength": 255,
+            "minLength": 0,
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          }
+        }
+      },
+      "ConditionDto": {
+        "type": "object",
+        "properties": {
+          "bankName": {
+            "type": "string"
+          },
+          "bankCode": {
+            "maxLength": 20,
+            "minLength": 0,
+            "type": "string"
+          },
+          "accountNumber": {
+            "pattern": "[0-9]{0,255}",
+            "type": "string"
+          },
+          "cardNumber": {
+            "pattern": "^(?=[0-9]*$)(?:.{16}|.{19})$",
+            "type": "string"
+          },
+          "provideBankDetailsLater": {
+            "type": "boolean"
+          },
+          "disburseType": {
+            "type": "string",
+            "enum": [
+              "CARD_ACCOUNT",
+              "BANK_ACCOUNT"
+            ]
+          },
+          "license": {
+            "maxLength": 255,
+            "minLength": 0,
+            "type": "string"
+          },
+          "portalAccountNumberMandatory": {
+            "type": "boolean"
+          }
+        }
+      },
+      "MobileContactDataDetailDto": {
+        "type": "object",
+        "properties": {
+          "recordId": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "EMAIL",
+              "IM",
+              "PHONE",
+              "POSTAL",
+              "URL"
+            ]
+          },
+          "label": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          },
+          "isPrimary": {
+            "type": "boolean"
+          }
+        }
+      },
+      "MobileContactDataProfileDto": {
+        "type": "object",
+        "properties": {
+          "borrowerId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "company": {
+            "type": "string"
+          },
+          "department": {
+            "type": "string"
+          },
+          "displayName": {
+            "type": "string"
+          },
+          "familyName": {
+            "type": "string"
+          },
+          "givenName": {
+            "type": "string"
+          },
+          "hasThumbnail": {
+            "type": "boolean"
+          },
+          "jobTitle": {
+            "type": "string"
+          },
+          "middleName": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          },
+          "prefix": {
+            "type": "string"
+          },
+          "rawContactId": {
+            "type": "string"
+          },
+          "recordId": {
+            "type": "string"
+          },
+          "suffix": {
+            "type": "string"
+          },
+          "thumbnailPath": {
+            "type": "string"
+          },
+          "contactDetails": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MobileContactDataDetailDto"
+            }
+          }
+        }
+      },
+      "MobileContactDataRequest": {
+        "type": "object",
+        "properties": {
+          "contactProfiles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MobileContactDataProfileDto"
+            }
+          },
+          "borrowerId": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "BaseResponseString": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "errorCode": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "RequestTokenDto": {
+        "type": "object",
+        "properties": {
+          "actionIdentifier": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "refreshToken": {
+            "type": "string"
+          },
+          "utmSource": {
+            "type": "string"
+          },
+          "utmCampaign": {
+            "type": "string"
+          },
+          "utmContent": {
+            "type": "string"
+          },
+          "utmMedium": {
+            "type": "string"
+          },
+          "utmTerm": {
+            "type": "string"
+          },
+          "affSid": {
+            "type": "string"
+          },
+          "referrer": {
+            "type": "string"
+          }
+        }
+      },
+      "AcceptanceCodeSendingRequestDto": {
+        "required": [
+          "source"
+        ],
+        "type": "object",
+        "properties": {
+          "mobilePhone": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string",
+            "enum": [
+              "ONLINE",
+              "OFFLINE",
+              "MOBILE"
+            ]
+          }
+        }
+      },
+      "CreateApplicationDto": {
+        "type": "object",
+        "properties": {
+          "requestedAmount": {
+            "maximum": 16000000,
+            "exclusiveMaximum": false,
+            "minimum": 0,
+            "exclusiveMinimum": false,
+            "type": "number"
+          },
+          "requestedTerm": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "otherData": {
+            "$ref": "#/components/schemas/OtherData"
+          },
+          "utmParametersData": {
+            "$ref": "#/components/schemas/UtmParametersData"
+          },
+          "expressProcessing": {
+            "type": "boolean"
+          }
+        }
+      },
+      "OtherData": {
+        "type": "object",
+        "properties": {
+          "googleAnalyticsClientId": {
+            "maxLength": 255,
+            "minLength": 0,
+            "type": "string"
+          },
+          "applySourceType": {
+            "maxLength": 255,
+            "minLength": 0,
+            "type": "string"
+          },
+          "phoneNumber": {
+            "maxLength": 255,
+            "minLength": 0,
+            "type": "string"
+          }
+        }
+      },
+      "UtmParametersData": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "maxLength": 2048,
+            "minLength": 0,
+            "type": "string"
+          },
+          "campaign": {
+            "maxLength": 2048,
+            "minLength": 0,
+            "type": "string"
+          },
+          "content": {
+            "maxLength": 2048,
+            "minLength": 0,
+            "type": "string"
+          },
+          "medium": {
+            "maxLength": 2048,
+            "minLength": 0,
+            "type": "string"
+          },
+          "term": {
+            "maxLength": 2048,
+            "minLength": 0,
+            "type": "string"
+          },
+          "affSid": {
+            "maxLength": 2048,
+            "minLength": 0,
+            "type": "string"
+          },
+          "referrer": {
+            "maxLength": 2048,
+            "minLength": 0,
+            "type": "string"
+          }
+        }
+      },
+      "BankDetailsDto": {
+        "type": "object",
+        "properties": {
+          "providePhotoLater": {
+            "type": "boolean"
+          },
+          "portalUploadFilesMandatory": {
+            "type": "boolean"
+          },
+          "portalAccountNumberMandatory": {
+            "type": "boolean"
+          },
+          "documentFileDto1": {
+            "$ref": "#/components/schemas/DocumentFileDto"
+          },
+          "documentFileDto2": {
+            "$ref": "#/components/schemas/DocumentFileDto"
+          }
+        }
+      },
+      "BorrowerDocument": {
+        "type": "object",
+        "properties": {
+          "borrowerId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "CMND_FRONT",
+              "CMND_BACK",
+              "BANK_CARD",
+              "SELFIE_WITH_CMND",
+              "SELFIE_WITH_CMND_PORTAL",
+              "DRIVING_LICENSE",
+              "PASSPORT",
+              "STAFF_CARD",
+              "HEALTH_INSURANCE",
+              "LABOR_CONTRACT",
+              "BANK_STATEMENTS",
+              "SALARY_SMS",
+              "INTERNET_BANKING",
+              "PAYSLIP",
+              "BUSINESS_LICENSE",
+              "INVOICE",
+              "WORK_LOCATION",
+              "SELFIE_WITH_STAFF_UNIFORM",
+              "GPS_LOCATION",
+              "TELECOM_SMS",
+              "INVOICE_OF_COMMUNAL_PAYMENT",
+              "FAMILY_BOOK",
+              "SCREENSHOT",
+              "OTHER"
+            ]
+          }
+        }
+      },
+      "DocumentFileDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fileName": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        }
+      },
+      "DocumentsDto": {
+        "type": "object",
+        "properties": {
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BorrowerDocument"
+            }
+          }
+        }
+      },
+      "ProfileDto": {
+        "type": "object",
+        "properties": {
+          "addressData": {
+            "$ref": "#/components/schemas/AddressDto"
+          },
+          "bankDetailsData": {
+            "$ref": "#/components/schemas/BankDetailsDto"
+          },
+          "contactPersonData": {
+            "$ref": "#/components/schemas/ContactPersonDto"
+          },
+          "employmentData": {
+            "$ref": "#/components/schemas/EmploymentDto"
+          },
+          "personalData": {
+            "$ref": "#/components/schemas/PersonalDataDto"
+          },
+          "documentsDto": {
+            "$ref": "#/components/schemas/DocumentsDto"
+          },
+          "signUpData": {
+            "$ref": "#/components/schemas/SignUpDto"
+          },
+          "conditionDto": {
+            "$ref": "#/components/schemas/ConditionDto"
+          }
+        }
+      },
+      "SignUpDto": {
+        "required": [
+          "fullName"
+        ],
+        "type": "object",
+        "properties": {
+          "mobilePhone": {
+            "type": "string"
+          },
+          "fullName": {
+            "maxLength": 255,
+            "minLength": 0,
+            "type": "string"
+          }
+        }
+      },
+      "BaseResponseObject": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "object"
+          },
+          "message": {
+            "type": "string"
+          },
+          "errorCode": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "EarlyRepaymentDto": {
+        "type": "object",
+        "properties": {
+          "periodEnd": {
+            "type": "string",
+            "format": "date"
+          },
+          "fee": {
+            "type": "number"
+          },
+          "closeAmount": {
+            "type": "number"
+          },
+          "savingAmount": {
+            "type": "number"
+          }
+        }
+      },
+      "ExtendedLoanDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ACTIVE",
+              "PROLONGED",
+              "EXPIRED",
+              "CALCULATION_STOPPED",
+              "ANNULLED",
+              "REPAID_OVERDUE",
+              "FINISHED",
+              "SOLD",
+              "SOLD_REPAID"
+            ]
+          },
+          "term": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "issuedAt": {
+            "type": "string",
+            "format": "date"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "finishedAt": {
+            "type": "string",
+            "format": "date"
+          },
+          "contractNumber": {
+            "type": "string"
+          },
+          "repaymentAmount": {
+            "type": "number"
+          },
+          "monthlyPayment": {
+            "type": "number"
+          },
+          "paidAmount": {
+            "type": "number"
+          },
+          "paidCashBack": {
+            "type": "number"
+          },
+          "paidRestructuringFee": {
+            "type": "number"
+          },
+          "overchargedInterest": {
+            "type": "number"
+          },
+          "latePaymentFee": {
+            "type": "number"
+          },
+          "installments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InstallmentDto"
+            }
+          },
+          "earlyRepaymentActive": {
+            "type": "boolean"
+          },
+          "earlyRepaymentDto": {
+            "$ref": "#/components/schemas/EarlyRepaymentDto"
+          }
+        }
+      },
+      "InstallmentDto": {
+        "type": "object",
+        "properties": {
+          "periodStart": {
+            "type": "string",
+            "format": "date"
+          },
+          "periodEnd": {
+            "type": "string",
+            "format": "date"
+          },
+          "realPeriodStart": {
+            "type": "string",
+            "format": "date"
+          },
+          "realPeriodEnd": {
+            "type": "string",
+            "format": "date"
+          },
+          "principal": {
+            "type": "number"
+          },
+          "remainingPrincipal": {
+            "type": "number"
+          },
+          "interest": {
+            "type": "number"
+          },
+          "monthlyPayment": {
+            "type": "number"
+          },
+          "serviceFee": {
+            "type": "number"
+          },
+          "processingFee": {
+            "type": "number"
+          },
+          "licensingFee": {
+            "type": "number"
+          }
+        }
+      },
+      "ApplicationDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "INITIAL",
+              "SCORING_IN_PROGRESS",
+              "WAITING_CIC_AVAILABILITY",
+              "SENT_TO_CREDIT_HISTORY_CHECK",
+              "CREDIT_HISTORY_CHECK_IN_PROGRESS",
+              "SENT_TO_UNDERWRITING",
+              "UNDERWRITING_IN_PROGRESS",
+              "REJECTED",
+              "APPROVED",
+              "CANCELED_BY_CLIENT",
+              "CONFIRMED_BY_CLIENT",
+              "SIGNED_BY_VERIFIER",
+              "READY_FOR_PAYOUT",
+              "READY_FOR_AUTO_DISBURSEMENT",
+              "PAYOUT_IN_PROGRESS",
+              "PAYOUT_ERROR",
+              "READY_FOR_MANUAL_DISBURSEMENT",
+              "OUTGOING_PAYMENT_IN_PROGRESS",
+              "OUTGOING_PAYMENT_ERROR",
+              "OUTGOING_PAYMENT_CANCELED",
+              "OUTGOING_PAYMENT_SUCCEED"
+            ]
+          },
+          "approvedTerm": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "approvedAmount": {
+            "type": "number"
+          },
+          "requestedAmount": {
+            "type": "number"
+          },
+          "underwriterDecisionMadeAt": {
+            "type": "string",
+            "format": "date"
+          },
+          "requestedAt": {
+            "type": "string",
+            "format": "date"
+          },
+          "installments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InstallmentDto"
+            }
+          },
+          "amountToPay": {
+            "type": "number"
+          },
+          "interestRate": {
+            "type": "number"
+          },
+          "latePaymentFeeAmount": {
+            "type": "number"
+          },
+          "vnptData": {
+            "$ref": "#/components/schemas/VnptDataDto"
+          },
+          "dmsReject": {
+            "type": "boolean"
+          },
+          "partnerRedirectEnable": {
+            "type": "boolean"
+          },
+          "partnerRedirectUrl": {
+            "type": "string"
+          },
+          "partnerRedirectTime": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "VnptDataDto": {
+        "type": "object",
+        "properties": {
+          "accountName": {
+            "type": "string"
+          },
+          "accountNumber": {
+            "type": "string"
+          },
+          "bankName": {
+            "type": "string"
+          },
+          "bankBranch": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
